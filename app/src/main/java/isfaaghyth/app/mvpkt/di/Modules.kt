@@ -15,7 +15,7 @@ import org.koin.dsl.module.module
  * github: @isfaaghyth
  */
 
-val schdulerModule = module {
+val schedulerModule = module {
     factory { CompositeDisposable() }
     single { AppSchedulerProvider() } bind SchedulerProvider::class
 }

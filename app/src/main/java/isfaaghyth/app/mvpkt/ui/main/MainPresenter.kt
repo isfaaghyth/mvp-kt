@@ -10,10 +10,18 @@ import isfaaghyth.app.mvpkt.data.repository.remote.GithubRepositoryImpl
 class MainPresenter(private val repositoryImpl: GithubRepositoryImpl): BasePresenter<MainView>(), MainPresenterIntr {
 
     override fun getProfile(username: String) {
+        view().showLoading()
         repositoryImpl.profile(username)
-            .subscribe({ res -> run {
-                view().onGithubProfile(res)
-            } }, this::onError)
+            .subscribe(
+                { res -> run {
+                    view().hideLoading()
+                    view().onGithubProfile(res)
+                } },
+                { err -> run {
+                    view().hideLoading()
+                    onError(err)
+                } }
+            )
     }
 
 }

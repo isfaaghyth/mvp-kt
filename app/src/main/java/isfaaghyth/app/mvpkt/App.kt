@@ -4,7 +4,7 @@ import android.app.Application
 import isfaaghyth.app.mvpkt.di.networkModule
 import isfaaghyth.app.mvpkt.di.presenterModule
 import isfaaghyth.app.mvpkt.di.repositoryModule
-import isfaaghyth.app.mvpkt.di.schdulerModule
+import isfaaghyth.app.mvpkt.di.schedulerModule
 import org.koin.android.ext.android.startKoin
 
 /**
@@ -16,7 +16,8 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin(this,
-            listOf(schdulerModule,
+            listOf(
+                schedulerModule,
                 networkModule,
                 repositoryModule,
                 presenterModule))
