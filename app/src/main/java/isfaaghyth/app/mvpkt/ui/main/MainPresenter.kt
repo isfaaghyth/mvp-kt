@@ -11,7 +11,7 @@ class MainPresenter(private val repositoryImpl: GithubRepositoryImpl): BasePrese
 
     override fun getProfile(username: String) {
         view().showLoading()
-        repositoryImpl.profile(username)
+        subscribe(repositoryImpl.profile(username)
             .subscribe(
                 { res -> run {
                     view().hideLoading()
@@ -19,9 +19,9 @@ class MainPresenter(private val repositoryImpl: GithubRepositoryImpl): BasePrese
                 } },
                 { err -> run {
                     view().hideLoading()
-                    onError(err)
+                    super.onError(err)
                 } }
-            )
+            ))
     }
 
 }
