@@ -19,6 +19,8 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
     override fun presenter() = presenter
 
     override fun onCreated(state: Bundle?) {
+        presenter.attachView(this)
+
         val username = "isfaaghyth"
         presenter.getProfile(username)
     }
