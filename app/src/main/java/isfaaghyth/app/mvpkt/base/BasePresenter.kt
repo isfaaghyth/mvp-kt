@@ -11,7 +11,7 @@ import java.net.SocketTimeoutException
  * Created by isfaaghyth on 21/11/18.
  * github: @isfaaghyth
  */
-class BasePresenter<V: BaseView>: BasePresenterIntr<V> {
+open class BasePresenter<V: BaseView>: BasePresenterIntr<V> {
 
     /**
      * CompositeDisposable()

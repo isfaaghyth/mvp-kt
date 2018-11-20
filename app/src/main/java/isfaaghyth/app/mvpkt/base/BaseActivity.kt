@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity
  */
 abstract class BaseActivity<out P: BasePresenter<*>>: AppCompatActivity(), BaseView {
 
+    //inflate a view in XML and return it
+    protected abstract fun contentView(): Int
+
     /**
      * The presenter acts upon the model and the view.
      * It retrieves data from repositories (the model),
@@ -17,8 +20,6 @@ abstract class BaseActivity<out P: BasePresenter<*>>: AppCompatActivity(), BaseV
     private lateinit var presenter: P
     protected abstract fun presenter(): P
 
-    //inflate a view in XML and return it
-    protected abstract fun contentView(): Int
     protected abstract fun onCreated(state: Bundle?)
 
     override fun onCreate(savedInstanceState: Bundle?) {
