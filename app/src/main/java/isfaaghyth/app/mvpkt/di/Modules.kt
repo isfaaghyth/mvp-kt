@@ -1,6 +1,8 @@
 package isfaaghyth.app.mvpkt.di
 
 import io.reactivex.disposables.CompositeDisposable
+import isfaaghyth.app.mvpkt.data.AppDataManager
+import isfaaghyth.app.mvpkt.data.DataManager
 import isfaaghyth.app.mvpkt.data.repository.remote.GithubRepository
 import isfaaghyth.app.mvpkt.data.repository.remote.GithubRepositoryImpl
 import isfaaghyth.app.mvpkt.network.Network
@@ -26,6 +28,7 @@ val networkModule = module {
 
 val repositoryModule = module {
     single { GithubRepository(get(), get()) } bind GithubRepositoryImpl::class
+    single { AppDataManager(get()) } bind DataManager::class
 }
 
 val presenterModule = module {

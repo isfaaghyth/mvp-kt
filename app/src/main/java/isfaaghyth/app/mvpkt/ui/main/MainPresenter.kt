@@ -1,17 +1,18 @@
 package isfaaghyth.app.mvpkt.ui.main
 
 import isfaaghyth.app.mvpkt.base.BasePresenter
+import isfaaghyth.app.mvpkt.data.DataManager
 import isfaaghyth.app.mvpkt.data.repository.remote.GithubRepositoryImpl
 
 /**
  * Created by isfaaghyth on 21/11/18.
  * github: @isfaaghyth
  */
-class MainPresenter(private val repositoryImpl: GithubRepositoryImpl): BasePresenter<MainView>(), MainPresenterIntr {
+class MainPresenter(private val dataManager: DataManager): BasePresenter<MainView>(), MainPresenterIntr {
 
     override fun getProfile(username: String) {
         view().showLoading()
-        subscribe(repositoryImpl.profile(username)
+        subscribe(dataManager.profile(username)
             .subscribe(
                 { res -> run {
                     view().hideLoading()

@@ -26,8 +26,8 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
     }
 
     override fun onGithubProfile(profile: Profile) {
-        Log.d("TAG", profile.name)
-        Log.d("TAG", profile.avatarUrl)
+        Log.d("getProfile", profile.name)
+        Log.d("getProfile", profile.avatarUrl)
     }
 
 }
