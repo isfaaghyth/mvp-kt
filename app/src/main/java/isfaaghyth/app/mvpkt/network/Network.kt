@@ -14,12 +14,11 @@ import java.util.concurrent.TimeUnit
  * Created by isfaaghyth on 21/11/18.
  * github: @isfaaghyth
  */
-object Network {
+class Network {
 
-    private const val REQUEST_TIME_OUT: Long = 30
-    val builder: Routes = builder().create(Routes::class.java)
+    private val REQUEST_TIME_OUT: Long = 30
 
-    private fun builder(): Retrofit {
+    fun builder(): Retrofit {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 

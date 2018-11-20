@@ -5,4 +5,5 @@ package isfaaghyth.app.mvpkt.ui.main
  * github: @isfaaghyth
  */
 interface MainPresenterIntr {
+    fun getProfile(username: String)
 }

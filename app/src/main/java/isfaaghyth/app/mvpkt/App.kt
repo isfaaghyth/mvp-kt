@@ -1,6 +1,11 @@
 package isfaaghyth.app.mvpkt
 
 import android.app.Application
+import isfaaghyth.app.mvpkt.di.networkModule
+import isfaaghyth.app.mvpkt.di.presenterModule
+import isfaaghyth.app.mvpkt.di.repositoryModule
+import isfaaghyth.app.mvpkt.di.schdulerModule
+import org.koin.android.ext.android.startKoin
 
 /**
  * Created by isfaaghyth on 21/11/18.
@@ -10,7 +15,11 @@ class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
-
+        startKoin(this,
+            listOf(schdulerModule,
+                networkModule,
+                repositoryModule,
+                presenterModule))
     }
 
 }

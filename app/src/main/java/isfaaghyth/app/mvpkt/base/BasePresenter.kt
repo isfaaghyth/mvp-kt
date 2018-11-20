@@ -2,8 +2,9 @@ package isfaaghyth.app.mvpkt.base
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
-import isfaaghyth.app.mvpkt.network.Network
 import isfaaghyth.app.mvpkt.network.Routes
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 import retrofit2.HttpException
 import java.net.SocketTimeoutException
 
@@ -11,7 +12,7 @@ import java.net.SocketTimeoutException
  * Created by isfaaghyth on 21/11/18.
  * github: @isfaaghyth
  */
-open class BasePresenter<V: BaseView>: BasePresenterIntr<V> {
+open class BasePresenter<V: BaseView>: BasePresenterIntr<V>, KoinComponent {
 
     /**
      * CompositeDisposable()
@@ -20,16 +21,15 @@ open class BasePresenter<V: BaseView>: BasePresenterIntr<V> {
      * @example:
      * for disposable handling of network request
      */
-    private var composite = CompositeDisposable()
+    private val composite by inject<CompositeDisposable>()
 
-    private lateinit var routes: Routes
-    protected fun routes() = routes
+    protected val routes by inject<Routes>()
 
     private lateinit var view: V
+    protected fun view(): V = view
 
     override fun attachView(view: V) {
         this.view = view
-        routes = Network.builder
     }
 
     override fun dettachView() {
