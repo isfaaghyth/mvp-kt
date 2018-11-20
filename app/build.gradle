@@ -44,6 +44,9 @@ dependencies {
     //koin (dependencies injection)
     implementation "org.koin:koin-android:$koin_version"
 
+    //utilities
+    implementation 'com.github.matecode:Snacky:1.0.3'
+
     //testing
     testImplementation "org.mockito:mockito-core:$mockito_version"
     testImplementation "org.mockito:mockito-inline:$mockito_version"

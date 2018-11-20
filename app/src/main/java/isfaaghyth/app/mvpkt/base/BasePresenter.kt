@@ -2,6 +2,7 @@ package isfaaghyth.app.mvpkt.base
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import isfaaghyth.app.mvpkt.network.Network
 import isfaaghyth.app.mvpkt.network.Routes
 import retrofit2.HttpException
 import java.net.SocketTimeoutException
@@ -28,6 +29,7 @@ class BasePresenter<V: BaseView>: BasePresenterIntr<V> {
 
     override fun attachView(view: V) {
         this.view = view
+        routes = Network.builder
     }
 
     override fun dettachView() {
