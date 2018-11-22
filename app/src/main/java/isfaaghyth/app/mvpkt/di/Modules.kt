@@ -34,3 +34,9 @@ val repositoryModule = module {
 val presenterModule = module {
     single { MainPresenter(get()) }
 }
+
+val modules = listOf(
+    schedulerModule,
+    networkModule,
+    repositoryModule,
+    presenterModule)
