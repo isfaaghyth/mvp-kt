@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/toolbar"
-        android:background="@android:color/white"
-        app:contentInsetLeft="0dp"
-        app:contentInsetStart="0dp"
-        app:contentInsetRight="0dp"
-        app:contentInsetEnd="0dp">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="60dp"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/toolbar"
+	android:background="@android:color/white"
+	app:contentInsetLeft="6dp"
+	app:contentInsetStart="6dp"
+	app:contentInsetRight="6dp"
+	app:contentInsetEnd="6dp">
 
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Title"
-            android:textSize="20sp"
-            fontPath="fonts/Soleil-Bold.otf"
-            android:textColor="@color/colorBlack"
-            android:layout_centerVertical="true"/>
+        <LinearLayout
+			android:orientation="vertical"
+			android:gravity="center_vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
 
-        <TextView
-                android:id="@+id/txtSubTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Sub Title"
-                android:textSize="12sp"
-                fontPath="fonts/Soleil-Book.ttf"
-                android:textColor="@android:color/darker_gray"
-                android:layout_centerVertical="true"/>
+            <TextView
+				android:id="@+id/txtTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				tools:text="Title"
+				android:textSize="20sp"
+				fontPath="fonts/Soleil-Bold.otf"
+				android:textColor="@color/colorBlack"/>
 
-    </LinearLayout>
+            <TextView
+				android:id="@+id/txtSubTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				tools:text="Sub Title"
+				android:textSize="12sp"
+				fontPath="fonts/Soleil-Book.ttf"
+				android:textColor="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </androidx.appcompat.widget.Toolbar>

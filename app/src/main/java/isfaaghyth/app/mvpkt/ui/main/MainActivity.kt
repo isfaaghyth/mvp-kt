@@ -9,6 +9,10 @@ import isfaaghyth.app.mvpkt.base.BaseActivity
 import isfaaghyth.app.mvpkt.data.entity.Profile
 import kotlinx.android.synthetic.main.toolbar.*
 import org.koin.android.ext.android.inject
+import android.opengl.ETC1.getWidth
+import android.view.animation.TranslateAnimation
+
+
 
 /**
  * Created by isfaaghyth on 21/11/18.
