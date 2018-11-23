@@ -2,9 +2,12 @@ package isfaaghyth.app.mvpkt.ui.main
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import isfaaghyth.app.mvpkt.R
 import isfaaghyth.app.mvpkt.base.BaseActivity
 import isfaaghyth.app.mvpkt.data.entity.Profile
+import kotlinx.android.synthetic.main.toolbar.*
 import org.koin.android.ext.android.inject
 
 /**
@@ -21,8 +24,26 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
     override fun onCreated(state: Bundle?) {
         presenter.attachView(this)
 
+        setSupportActionBar(toolbar)
+        txtTitle.text = "Aplikasi Pertama"
+        txtSubTitle.text = "Selamat Datang!"
+
         val username = "isfaaghyth"
         presenter.getProfile(username)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.mn_notification -> {
+                Log.e("TAG", "Notification!")
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onGithubProfile(profile: Profile) {

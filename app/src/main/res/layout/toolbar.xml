@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar
+<androidx.appcompat.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="60dp"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/toolbar"
         android:background="@android:color/white"
@@ -12,7 +12,8 @@
         app:contentInsetRight="0dp"
         app:contentInsetEnd="0dp">
 
-    <RelativeLayout
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -21,9 +22,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Title"
-            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            fontPath="fonts/Soleil-Bold.otf"
+            android:textColor="@color/colorBlack"
             android:layout_centerVertical="true"/>
 
-    </RelativeLayout>
+        <TextView
+                android:id="@+id/txtSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Sub Title"
+                android:textSize="12sp"
+                fontPath="fonts/Soleil-Book.ttf"
+                android:textColor="@android:color/darker_gray"
+                android:layout_centerVertical="true"/>
 
-</android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

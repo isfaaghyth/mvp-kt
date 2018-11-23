@@ -1,6 +1,6 @@
 package isfaaghyth.app.mvpkt.base
 
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 
 /**
  * Created by isfaaghyth on 21/11/18.

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MVPKt</string>
+	<string name="mn_notification">Notification</string>
 </resources>

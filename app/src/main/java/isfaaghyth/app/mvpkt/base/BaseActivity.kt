@@ -1,7 +1,9 @@
 package isfaaghyth.app.mvpkt.base
 
+import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 /**
  * Created by isfaaghyth on 21/11/18.
@@ -32,6 +34,10 @@ abstract class BaseActivity<out P: BasePresenter<*>>: AppCompatActivity(), BaseV
     override fun onDestroy() {
         super.onDestroy()
         presenter.dettachView()
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 
     override fun showLoading(message: String) {
