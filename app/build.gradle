@@ -35,6 +35,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //noinspection GradleDependency,GradleCompatible
     implementation "com.android.support:appcompat-v7:$android_support_version"
 
     //anko
@@ -54,6 +56,9 @@ dependencies {
 
     //utilities
     implementation 'com.github.matecode:Snacky:1.0.3'
+
+    //design
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 
     //testing
     testImplementation 'org.koin:koin-test:1.0.1'
