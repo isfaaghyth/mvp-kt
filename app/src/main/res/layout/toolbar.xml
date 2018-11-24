@@ -10,10 +10,10 @@
 	android:layout_marginTop="16dp"
 	android:layout_marginStart="16dp"
 	android:layout_marginEnd="16dp"
-	app:contentInsetLeft="10dp"
-	app:contentInsetStart="10dp"
-	app:contentInsetRight="10dp"
-	app:contentInsetEnd="10dp">
+	app:contentInsetLeft="3dp"
+	app:contentInsetStart="3dp"
+	app:contentInsetRight="3dp"
+	app:contentInsetEnd="3dp">
 
     <RelativeLayout
 		android:layout_width="match_parent"

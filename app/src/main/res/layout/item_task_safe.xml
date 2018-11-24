@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    android:layout_marginBottom="3dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginStart="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:text="aman pak eko"
+            android:layout_width="wrap_content"
+            fontPath="fonts/Soleil-Bold.otf"
+            android:textSize="12sp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/badge_safe"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="tidak ada tugas"
+            android:layout_width="wrap_content"
+            fontPath="fonts/Soleil-Light.ttf"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Integrasi Sistem 2018"
+            android:layout_width="wrap_content"
+            fontPath="fonts/Soleil-Bold.otf"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

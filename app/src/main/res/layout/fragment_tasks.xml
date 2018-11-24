@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <TextView
+        android:text="all tasks have been done."
+        android:layout_width="wrap_content"
+        fontPath="fonts/Soleil-Light.ttf"
+        android:textStyle="italic"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
