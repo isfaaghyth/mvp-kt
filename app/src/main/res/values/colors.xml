@@ -6,4 +6,14 @@
 
     <color name="colorBlack">#2C3E50</color>
 	<color name="colorBackground">#F3F3F4</color>
+
+    <color name="colorBadgeSafePrimary">#A7D145</color>
+    <color name="colorBadgeSafePrimaryDark">#3ECF80</color>
+
+    <color name="colorBadgeWarningPrimary">#A7D145</color>
+    <color name="colorBadgeWarningPrimaryDark">#3ECF80</color>
+
+    <color name="colorBadgeDueDatePrimary">#F95B85</color>
+    <color name="colorBadgeDueDatePrimaryDark">#F71753</color>
+
 </resources>

@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">Elen STTNF</string>
-	<string name="mn_notification">Notification</string>
+    <string name="app_name">Academia</string>
+    <string name="app_description">Portal Mahasiswa STTNF</string>
+
+    <string name="tab_home">Home</string>
+	<string name="tab_task">Tasks</string>
+
+    <string name="mn_notification">Notification</string>
 </resources>

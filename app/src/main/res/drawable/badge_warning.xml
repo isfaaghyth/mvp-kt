@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--TODO-->
+    <!--<gradient-->
+        <!--android:type="linear"-->
+        <!--android:angle="135"-->
+        <!--android:startColor="@color/colorBadgeSafePrimaryDark"-->
+        <!--android:endColor="@color/colorBadgeSafePrimary" />-->
+
+    <corners android:radius="3dp" />
+
+</shape>

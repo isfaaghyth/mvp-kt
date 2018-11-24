@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 import org.koin.android.ext.android.inject
 import isfaaghyth.app.elenf.ui.adapter.ViewPagerAdapter
 import isfaaghyth.app.elenf.ui.main.fragment.home.HomeFragment
+import isfaaghyth.app.elenf.ui.main.fragment.tasks.TaskFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -26,20 +27,20 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
 
     override fun onCreated(state: Bundle?) {
         presenter.attachView(this)
-
-        setSupportActionBar(toolbar)
-        txtTitle.text = "Elen STTNF"
-        txtSubTitle.text = "e-learning!"
-
-        tabPrepared()
+        activityViewPrepared()
     }
 
-    private fun tabPrepared() {
+    private fun activityViewPrepared() {
+        //set support action bar
+        setSupportActionBar(toolbar)
+
+        //preparing tabLayout #1
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(HomeFragment(), "Due Date")
-        adapter.addFragment(HomeFragment(), "Courses")
+        adapter.addFragment(HomeFragment(), getString(R.string.tab_home))
+        adapter.addFragment(TaskFragment(), getString(R.string.tab_task))
         vpMain.adapter = adapter
 
+        //set it (#1)!
         tabMain.setupWithViewPager(vpMain)
     }
 

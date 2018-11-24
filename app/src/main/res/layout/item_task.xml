@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:layout_margin="10dp">
+	android:layout_height="wrap_content"
+	android:clickable="true"
+	android:focusable="true"
+	android:foreground="?selectableItemBackground"
+	android:layout_marginBottom="3dp"
+	android:layout_marginTop="3dp"
+	android:layout_marginEnd="3dp"
+	android:layout_marginStart="3dp">
 
-	<com.google.android.material.card.MaterialCardView
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:minHeight="50dp">
+		android:orientation="vertical"
+		android:padding="24dp">
 
 		<TextView
+			android:text="#masihaman"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="demo"/>
+			fontPath="fonts/Soleil-Bold.otf"
+			android:textSize="12sp"
+			android:paddingStart="6dp"
+			android:paddingEnd="6dp"
+			android:paddingTop="2dp"
+			android:paddingBottom="2dp"
+			android:textStyle="bold"
+			android:textColor="@android:color/white"
+			android:background="@drawable/badge_duedate"
+			android:layout_height="wrap_content"/>
 
-	</com.google.android.material.card.MaterialCardView>
+		<TextView
+			android:text="24 Desember 2019"
+			android:layout_width="wrap_content"
+			fontPath="fonts/Soleil-Light.ttf"
+			android:textSize="14sp"
+			android:layout_marginTop="6dp"
+			android:layout_height="wrap_content"/>
 
-</LinearLayout>
+		<TextView
+			android:text="Pemrograman Mobile - Membuat Activity layout untuk Mockup"
+			android:layout_width="wrap_content"
+			fontPath="fonts/Soleil-Bold.otf"
+			android:textSize="16sp"
+			android:layout_marginTop="6dp"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+</androidx.cardview.widget.CardView>
