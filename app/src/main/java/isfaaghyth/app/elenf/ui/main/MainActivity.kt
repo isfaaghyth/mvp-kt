@@ -6,7 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import isfaaghyth.app.elenf.R
 import isfaaghyth.app.elenf.base.BaseActivity
-import isfaaghyth.app.elenf.data.entity.Profile
+import isfaaghyth.app.elenf.data.entity.Elen
 import kotlinx.android.synthetic.main.toolbar.*
 import org.koin.android.ext.android.inject
 import isfaaghyth.app.elenf.ui.adapter.ViewPagerAdapter
@@ -29,19 +29,16 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
         presenter.attachView(this)
 
         setSupportActionBar(toolbar)
-        txtTitle.text = "Aplikasi Pertama"
-        txtSubTitle.text = "Selamat Datang!"
+        txtTitle.text = "Elen STTNF"
+        txtSubTitle.text = "e-learning!"
 
         tabPrepared()
-
-        val username = "isfaaghyth"
-        presenter.getProfile(username)
     }
 
     private fun tabPrepared() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(MainFragment(), "Overview")
-        adapter.addFragment(MainFragment(), "History")
+        adapter.addFragment(MainFragment(), "Due Date")
+        adapter.addFragment(MainFragment(), "Courses")
         vpMain.adapter = adapter
 
         tabMain.setupWithViewPager(vpMain)
@@ -59,11 +56,6 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onGithubProfile(profile: Profile) {
-        Log.d("getProfile", profile.name)
-        Log.d("getProfile", profile.avatarUrl)
     }
 
 }

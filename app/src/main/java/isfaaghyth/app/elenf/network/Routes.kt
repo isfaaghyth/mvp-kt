@@ -1,10 +1,10 @@
 package isfaaghyth.app.elenf.network
 
+import io.reactivex.Flowable
 import io.reactivex.Single
-import isfaaghyth.app.elenf.data.entity.Profile
-import isfaaghyth.app.elenf.data.entity.Repositories
-import retrofit2.http.GET
-import retrofit2.http.Path
+import isfaaghyth.app.elenf.data.entity.Elen
+import isfaaghyth.app.elenf.data.entity.Task
+import retrofit2.http.*
 
 /**
  * Created by isfaaghyth on 21/11/18.
@@ -12,14 +12,11 @@ import retrofit2.http.Path
  */
 interface Routes {
 
-    @GET("users/{username}")
-    fun getProfile(
-        @Path("username") username: String
-    ): Single<Profile>
-
-    @GET("users/{username}/repos")
-    fun getGithubRepository(
-        @Path("username") username: String
-    ): Single<List<Repositories>>
+    @FormUrlEncoded
+    @POST("cek")
+    fun getTask(
+        @Field("username") username: String,
+        @Field("password") password: String
+    ): Flowable<Elen>
 
 }

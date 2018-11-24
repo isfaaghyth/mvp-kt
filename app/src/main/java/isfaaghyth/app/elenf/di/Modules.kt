@@ -3,8 +3,8 @@ package isfaaghyth.app.elenf.di
 import io.reactivex.disposables.CompositeDisposable
 import isfaaghyth.app.elenf.data.AppDataManager
 import isfaaghyth.app.elenf.data.DataManager
-import isfaaghyth.app.elenf.data.repository.remote.GithubRepository
-import isfaaghyth.app.elenf.data.repository.remote.GithubRepositoryImpl
+import isfaaghyth.app.elenf.data.repository.remote.ElenRepository
+import isfaaghyth.app.elenf.data.repository.remote.ElenRepositoryImpl
 import isfaaghyth.app.elenf.network.Network
 import isfaaghyth.app.elenf.network.Routes
 import isfaaghyth.app.elenf.ui.main.MainPresenter
@@ -28,7 +28,7 @@ val networkModule = module {
 }
 
 val repositoryModule = module {
-    single { GithubRepository(get(), get()) } bind GithubRepositoryImpl::class
+    single { ElenRepository(get(), get()) } bind ElenRepositoryImpl::class
     single { AppDataManager(get()) } bind DataManager::class
 }
 

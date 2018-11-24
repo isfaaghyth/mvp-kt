@@ -1,20 +1,18 @@
 package isfaaghyth.app.elenf.data
 
+import io.reactivex.Flowable
 import io.reactivex.Single
-import isfaaghyth.app.elenf.data.entity.Profile
-import isfaaghyth.app.elenf.data.entity.Repositories
-import isfaaghyth.app.elenf.data.repository.remote.GithubRepositoryImpl
+import isfaaghyth.app.elenf.data.entity.Elen
+import isfaaghyth.app.elenf.data.entity.Task
+import isfaaghyth.app.elenf.data.repository.remote.ElenRepositoryImpl
 
 /**
  * Created by isfaaghyth on 21/11/18.
  * github: @isfaaghyth
  */
-class AppDataManager(private val repository: GithubRepositoryImpl): DataManager {
+class AppDataManager(private val repository: ElenRepositoryImpl): DataManager {
 
-    override fun profile(username: String): Single<Profile> =
-        repository.profile(username)
-
-    override fun repositories(username: String): Single<List<Repositories>> =
-        repository.repositories(username)
+    override fun tasks(username: String, password: String): Flowable<Elen>
+            = repository.tasks(username, password)
 
 }

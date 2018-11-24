@@ -15,7 +15,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "GITHUB_URL", "\"https://api.github.com/\"")
+        buildConfigField("String", "ELENF_URL", "\"https://elenf.herokuapp.com/\"")
     }
     buildTypes {
         release {

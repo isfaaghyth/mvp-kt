@@ -2,7 +2,7 @@ package isfaaghyth.app.elenf.ui.main
 
 import io.reactivex.Single
 import isfaaghyth.app.elenf.data.DataManager
-import isfaaghyth.app.elenf.data.entity.Profile
+import isfaaghyth.app.elenf.data.entity.Elen
 import isfaaghyth.app.elenf.di.modules
 import org.junit.Before
 import org.junit.Test
@@ -23,7 +23,7 @@ class MainPresenterTest: KoinTest {
     @Mock private lateinit var dataManager: DataManager
     private lateinit var presenter: MainPresenter
 
-    private lateinit var mProfile: Profile
+    private lateinit var mProfile: Elen
 
     @Before fun setUp() {
         startKoin(modules)
@@ -32,7 +32,7 @@ class MainPresenterTest: KoinTest {
     }
 
     @Test fun getProfile() {
-        mProfile = Profile()
+        mProfile = Elen()
 
         val username = "isfaaghyth"
         presenter.attachView(view)

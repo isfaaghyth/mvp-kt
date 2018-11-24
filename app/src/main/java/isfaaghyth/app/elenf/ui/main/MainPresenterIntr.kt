@@ -5,5 +5,4 @@ package isfaaghyth.app.elenf.ui.main
  * github: @isfaaghyth
  */
 interface MainPresenterIntr {
-    fun getProfile(username: String)
 }

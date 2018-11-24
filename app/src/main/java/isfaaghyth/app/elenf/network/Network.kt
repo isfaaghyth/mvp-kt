@@ -30,14 +30,16 @@ class Network {
             .build()
 
         val gsonBuilder = GsonBuilder()
-            //convert a conventional json entity names into java object
-            //example: isfa_ganteng -> isfaGanteng
+            /*
+            * setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+            * convert a conventional json entity names into java object
+            * */
             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .setLenient()
             .create()
 
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.GITHUB_URL)
+            .baseUrl(BuildConfig.ELENF_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gsonBuilder))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
