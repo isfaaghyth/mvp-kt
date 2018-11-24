@@ -6,11 +6,14 @@
 	android:layout_height="60dp"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/toolbar"
-	android:background="@android:color/white"
-	app:contentInsetLeft="6dp"
-	app:contentInsetStart="6dp"
-	app:contentInsetRight="6dp"
-	app:contentInsetEnd="6dp">
+	android:background="@null"
+	android:layout_marginTop="16dp"
+	android:layout_marginStart="16dp"
+	android:layout_marginEnd="16dp"
+	app:contentInsetLeft="10dp"
+	app:contentInsetStart="10dp"
+	app:contentInsetRight="10dp"
+	app:contentInsetEnd="10dp">
 
     <RelativeLayout
 		android:layout_width="match_parent"
@@ -29,7 +32,8 @@
 				tools:text="Title"
 				android:textSize="20sp"
 				fontPath="fonts/Soleil-Bold.otf"
-				android:textColor="@color/colorBlack"/>
+				android:textColor="@color/colorBlack"
+				tools:ignore="MissingPrefix"/>
 
             <TextView
 				android:id="@+id/txtSubTitle"
@@ -38,7 +42,8 @@
 				tools:text="Sub Title"
 				android:textSize="12sp"
 				fontPath="fonts/Soleil-Book.ttf"
-				android:textColor="@android:color/darker_gray"/>
+				android:textColor="@android:color/darker_gray"
+				tools:ignore="MissingPrefix"/>
 
         </LinearLayout>
 

@@ -38,6 +38,7 @@ dependencies {
 
     //noinspection GradleDependency,GradleCompatible
     implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.1.0-alpha01'
 
     //anko
     implementation "org.jetbrains.anko:anko:$anko_version"

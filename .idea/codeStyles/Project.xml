@@ -31,7 +31,6 @@
     </Objective-C-extensions>
     <XML>
       <option name="XML_ATTRIBUTE_WRAP" value="2" />
-      <option name="XML_KEEP_LINE_BREAKS_IN_TEXT" value="false" />
       <option name="XML_ALIGN_ATTRIBUTES" value="false" />
     </XML>
     <codeStyleSettings language="JAVA">

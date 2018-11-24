@@ -11,7 +11,10 @@ import kotlinx.android.synthetic.main.toolbar.*
 import org.koin.android.ext.android.inject
 import android.opengl.ETC1.getWidth
 import android.view.animation.TranslateAnimation
-
+import com.google.android.material.tabs.TabLayout
+import isfaaghyth.app.mvpkt.ui.adapter.ViewPagerAdapter
+import isfaaghyth.app.mvpkt.ui.main.fragment.MainFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 /**
@@ -32,8 +35,19 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
         txtTitle.text = "Aplikasi Pertama"
         txtSubTitle.text = "Selamat Datang!"
 
+        tabPrepared()
+
         val username = "isfaaghyth"
         presenter.getProfile(username)
+    }
+
+    private fun tabPrepared() {
+        val adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter.addFragment(MainFragment(), "Overview")
+        adapter.addFragment(MainFragment(), "History")
+        vpMain.adapter = adapter
+
+        tabMain.setupWithViewPager(vpMain)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

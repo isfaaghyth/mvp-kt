@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:padding="20dp"
-	android:background="@android:color/white">
+	android:background="@color/colorBackground">
 
-	<include layout="@layout/toolbar"/>
+	<ImageView
+		android:src="@drawable/bg_action_bar"
+		android:layout_width="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_height="wrap_content"/>
 
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
 
+		<include
+			layout="@layout/toolbar"/>
 
-</LinearLayout>
+		<androidx.viewpager.widget.ViewPager
+			android:id="@+id/vpMain"
+			android:layout_width="match_parent"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
+			android:layout_height="match_parent">
+
+			<isfaaghyth.app.mvpkt.utils.CustomTabLayout
+				android:id="@+id/tabMain"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:tabIndicatorHeight="4dp"
+				app:tabIndicatorFullWidth="false"
+				android:background="@null"
+				app:tabMode="scrollable"
+				app:tabGravity="center"
+				app:tabTextColor="@android:color/darker_gray"
+				app:tabSelectedTextColor="@color/colorBlack"
+				fontPath="fonts/Soleil-Bold.otf"
+				app:tabTextAppearance="@style/TabLayout"/>
+
+		</androidx.viewpager.widget.ViewPager>
+
+	</LinearLayout>
+
+</RelativeLayout>
