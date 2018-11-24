@@ -1,4 +1,4 @@
-package isfaaghyth.app.elenf.ui.main.fragment
+package isfaaghyth.app.elenf.ui.main.fragment.tasks
 
 import isfaaghyth.app.elenf.base.BaseView
 
@@ -6,5 +6,5 @@ import isfaaghyth.app.elenf.base.BaseView
  * Created by isfaaghyth on 24/11/18.
  * github: @isfaaghyth
  */
-interface MainFragmentView: BaseView {
+interface TaskFragmentView: BaseView {
 }

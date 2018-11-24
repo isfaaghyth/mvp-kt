@@ -8,7 +8,8 @@ import isfaaghyth.app.elenf.data.repository.remote.ElenRepositoryImpl
 import isfaaghyth.app.elenf.network.Network
 import isfaaghyth.app.elenf.network.Routes
 import isfaaghyth.app.elenf.ui.main.MainPresenter
-import isfaaghyth.app.elenf.ui.main.fragment.MainFragmentPresenter
+import isfaaghyth.app.elenf.ui.main.fragment.home.HomeFragmentPresenter
+import isfaaghyth.app.elenf.ui.main.fragment.tasks.TaskFragmentPresenter
 import isfaaghyth.app.elenf.utils.rx.AppSchedulerProvider
 import isfaaghyth.app.elenf.utils.rx.SchedulerProvider
 import org.koin.dsl.module.module
@@ -34,7 +35,8 @@ val repositoryModule = module {
 
 val presenterModule = module {
     single { MainPresenter(get()) }
-    single { MainFragmentPresenter(get()) }
+    single { HomeFragmentPresenter(get()) }
+    single { TaskFragmentPresenter(get()) }
 }
 
 val modules = listOf(

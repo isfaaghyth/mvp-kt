@@ -6,11 +6,10 @@ import android.view.Menu
 import android.view.MenuItem
 import isfaaghyth.app.elenf.R
 import isfaaghyth.app.elenf.base.BaseActivity
-import isfaaghyth.app.elenf.data.entity.Elen
 import kotlinx.android.synthetic.main.toolbar.*
 import org.koin.android.ext.android.inject
 import isfaaghyth.app.elenf.ui.adapter.ViewPagerAdapter
-import isfaaghyth.app.elenf.ui.main.fragment.MainFragment
+import isfaaghyth.app.elenf.ui.main.fragment.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -37,8 +36,8 @@ class MainActivity: BaseActivity<MainPresenter>(), MainView {
 
     private fun tabPrepared() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(MainFragment(), "Due Date")
-        adapter.addFragment(MainFragment(), "Courses")
+        adapter.addFragment(HomeFragment(), "Due Date")
+        adapter.addFragment(HomeFragment(), "Courses")
         vpMain.adapter = adapter
 
         tabMain.setupWithViewPager(vpMain)
