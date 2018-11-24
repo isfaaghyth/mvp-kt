@@ -8,6 +8,7 @@ import isfaaghyth.app.mvpkt.data.repository.remote.GithubRepositoryImpl
 import isfaaghyth.app.mvpkt.network.Network
 import isfaaghyth.app.mvpkt.network.Routes
 import isfaaghyth.app.mvpkt.ui.main.MainPresenter
+import isfaaghyth.app.mvpkt.ui.main.fragment.MainFragmentPresenter
 import isfaaghyth.app.mvpkt.utils.rx.AppSchedulerProvider
 import isfaaghyth.app.mvpkt.utils.rx.SchedulerProvider
 import org.koin.dsl.module.module
@@ -33,6 +34,7 @@ val repositoryModule = module {
 
 val presenterModule = module {
     single { MainPresenter(get()) }
+    single { MainFragmentPresenter(get()) }
 }
 
 val modules = listOf(

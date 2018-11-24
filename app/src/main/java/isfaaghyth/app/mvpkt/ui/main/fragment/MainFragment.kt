@@ -1,24 +1,23 @@
 package isfaaghyth.app.mvpkt.ui.main.fragment
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import isfaaghyth.app.mvpkt.R
+import isfaaghyth.app.mvpkt.base.BaseFragment
+import org.koin.android.ext.android.inject
 
 /**
  * Created by isfaaghyth on 24/11/18.
  * github: @isfaaghyth
  */
-class MainFragment: Fragment() {
+class MainFragment: BaseFragment<MainFragmentPresenter>(), MainFragmentView {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
-    }
+    override fun contentView(): Int = R.layout.fragment_main
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private val presenter by  inject<MainFragmentPresenter>()
+    override fun presenter(): MainFragmentPresenter = presenter
+
+    override fun onCreated(view: View) {
+
     }
 
 }
