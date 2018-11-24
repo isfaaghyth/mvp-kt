@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
@@ -49,6 +49,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
 							android:text="KODE MHS"/>
 
@@ -71,6 +72,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
 							android:text="KALENDER"/>
 
@@ -93,6 +95,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
 							android:text="PRODI"/>
 
@@ -115,6 +118,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
 							android:text="DOSEN"/>
 
@@ -144,6 +148,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
 							android:text="PEMBAYARAN"/>
 
@@ -166,6 +171,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
 							android:text="FORMULIR"/>
 
@@ -188,8 +194,9 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
-							android:text="BAAK"/>
+							android:text="CHAT BAAK"/>
 
 					</LinearLayout>
 					<LinearLayout
@@ -210,8 +217,9 @@
 							android:layout_height="wrap_content"
 							android:layout_marginTop="10dp"
 							android:textSize="12sp"
+							android:textColor="@android:color/darker_gray"
 							fontPath="fonts/Soleil-Book.ttf"
-							android:text="PARKIR"/>
+							android:text="QR PARKIR"/>
 
 					</LinearLayout>
 
@@ -225,7 +233,7 @@
 				android:layout_marginTop="20dp"
 				android:layout_marginStart="10dp"
 				fontPath="fonts/Soleil-Book.ttf"
-				android:textSize="16sp"
+				android:textSize="18sp"
 				android:text="Tugas Hari Ini"
 				android:layout_marginBottom="16dp"/>
 
@@ -236,7 +244,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="20dp"/>
+				tools:text="just for margin bottom"
+                android:layout_height="40dp"/>
 
 		</LinearLayout>
 

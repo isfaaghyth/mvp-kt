@@ -13,6 +13,15 @@
 		android:layout_alignParentEnd="true"
 		android:layout_height="wrap_content"/>
 
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/fltAction"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true"
+		android:src="@mipmap/ic_float_plus"
+		android:layout_margin="16dp"/>
+
 	<LinearLayout
 		android:orientation="vertical"
 		android:layout_width="match_parent"
