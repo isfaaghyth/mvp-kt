@@ -8,7 +8,7 @@ android {
     buildToolsVersion '28.0.3'
 
     defaultConfig {
-        applicationId "isfaaghyth.app.mvpkt"
+        applicationId "isfaaghyth.app.elenf"
         minSdkVersion 17
         targetSdkVersion 28
         versionCode 1
